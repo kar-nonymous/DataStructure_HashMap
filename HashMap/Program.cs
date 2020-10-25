@@ -16,18 +16,11 @@ namespace HashMap
             mapNode.Add("4", "be");
             mapNode.Add("5", "not");
 
-            Console.WriteLine("getting the value of index 1=" + mapNode.Get("1"));
-
-            Console.WriteLine("getting the value of index 5=" + mapNode.Get("5"));
-
-            Console.WriteLine("Removing");
-            mapNode.Remove("4");
-            //Console.WriteLine("getting value " + mapNode.Get("4"));
-
             Console.WriteLine("Displaying");
             mapNode.Display();
-            
-            Console.ReadLine();
+
+            Console.WriteLine("Frequency.....");
+            Console.WriteLine(mapNode.FindFrequency("to"));
         }
     }
 }

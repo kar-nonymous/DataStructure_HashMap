@@ -117,5 +117,26 @@ namespace HashMap
                     }
             }
         }
+        /// <summary>
+        /// UC 1 
+        /// Finds frequency of particular value
+        /// </summary>
+        /// <param name="value">The value.</param>
+        public int FindFrequency(V value)
+        {
+            int count = 0;
+            foreach (var linkedList in items)
+            {
+                if (linkedList != null)
+                {
+                    foreach (var element in linkedList)
+                    {
+                        if (element.Value.Equals(value))
+                            count++;
+                    }
+                }
+            }
+            return count;
+        }
     }
 }
