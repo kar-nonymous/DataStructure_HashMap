@@ -138,5 +138,31 @@ namespace HashMap
             }
             return count;
         }
+        /// <summary>
+        /// UC 3
+        /// Removes element from the hash map
+        /// </summary>
+        /// <param name="value"></param>
+        public void RemoveData(V value)
+        {
+            foreach(var linkedList in items)
+            {
+                if (linkedList != null)
+                {
+                    KeyValue<K, V>[] keyValue = new KeyValue<K, V>[linkedList.Count];
+                    int position = 0;
+                    foreach(var element in linkedList)
+                    {
+                        if(element.Value.Equals(value))
+                        {
+                            keyValue[position] = element;
+                            position++;
+                        }
+                    }
+                    foreach (var element in keyValue)
+                        linkedList.Remove(element);
+                }
+            }
+        }
     }
 }

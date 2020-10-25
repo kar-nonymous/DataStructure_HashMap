@@ -34,6 +34,9 @@ namespace HashMap
 
             Console.WriteLine("Frequency.....");
             Console.WriteLine(mapNode.FindFrequency("paranoid"));
+
+            mapNode.RemoveData("avoidable");
+            mapNode.Display();
         }
     }
 }
